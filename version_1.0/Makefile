@@ -1,16 +1,16 @@
 CC = gcc
 CFLAGS = -Wall
 
-all: server client_send client_receive
+all: server send_client display_client
 
 server: server.c
 	$(CC) $(CFLAGS) -o server server.c
 
-client_send: client_send.c
-	$(CC) $(CFLAGS) -o client_send client_send.c
+send_client: send_client.c
+	$(CC) $(CFLAGS) -o send_client send_client.c
 
-client_receive: client_receive.c
-	$(CC) $(CFLAGS) -o client_receive client_receive.c
+display_client: display_client.c
+	$(CC) $(CFLAGS) -o display_client display_client.c
 
 clean:
-	rm -f server client_send client_receive
+	rm -f server send_client display_client
